@@ -7,6 +7,9 @@ extends CharacterBody2D
 var gravity : float = 500.0
 var can_double_jump : float = false
 var sprite : Sprite2D
+var score : int = 0;
+
+@onready var score_coin_text : Label = get_node("CanvasLayer/ScoreCoin")
 
 func _ready():
 	sprite = get_node("Sprite2D")
@@ -40,3 +43,7 @@ func _physics_process(delta):
 
 func game_over():
 	get_tree().reload_current_scene()
+	
+func add_score(amount: int):
+	score += amount
+	score_coin_text.text = str(score)
