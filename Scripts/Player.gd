@@ -6,29 +6,34 @@ extends CharacterBody2D
 
 var gravity : float = 500.0
 var can_double_jump : float = false
-var sprite : Sprite2D
+var sprite : AnimatedSprite2D
 var score : int = 0;
 
 @onready var score_coin_text : Label = get_node("CanvasLayer/ScoreCoin")
 
 func _ready():
-	sprite = get_node("Sprite2D")
+	sprite = get_node("AnimatedSprite2D")
 	sprite.flip_h = defaultDirection
 
 func _physics_process(delta):
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	else:
-		can_double_jump = true
-	
 	velocity.x = 0
 	
 	if Input.is_key_pressed(KEY_LEFT):
 		velocity.x -= move_speed
+		sprite.play("walk")
 		sprite.flip_h = !defaultDirection
-	if Input.is_key_pressed(KEY_RIGHT):
+	elif Input.is_key_pressed(KEY_RIGHT):
 		velocity.x += move_speed
 		sprite.flip_h = defaultDirection
+		sprite.play("walk")
+	else: 
+		sprite.play("idle")
+		
+	if not is_on_floor():
+		velocity.y += gravity * delta
+		sprite.play("jump")
+	else:
+		can_double_jump = true
 	
 	if (is_on_floor()) and Input.is_key_pressed(KEY_SPACE):
 		velocity.y = -jump_force
