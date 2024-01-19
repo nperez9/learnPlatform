@@ -14,45 +14,50 @@
 [node name="Player" parent="." instance=ExtResource("2_072ye")]
 position = Vector2(38, -15)
 
-[node name="Spikes2" parent="." instance=ExtResource("3_wo6h7")]
+[node name="SpikesContainer" type="Node2D" parent="."]
+
+[node name="Spikes2" parent="SpikesContainer" instance=ExtResource("3_wo6h7")]
 position = Vector2(281, -9)
 
-[node name="Spikes" parent="." instance=ExtResource("3_wo6h7")]
+[node name="Spikes" parent="SpikesContainer" instance=ExtResource("3_wo6h7")]
 position = Vector2(532, -27)
 
-[node name="Coin" parent="." instance=ExtResource("6_8wuwg")]
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(90, -15)
 
-[node name="Coin2" parent="." instance=ExtResource("6_8wuwg")]
+[node name="Coin2" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(174, -49)
 
-[node name="Coin3" parent="." instance=ExtResource("6_8wuwg")]
+[node name="Coin3" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(218, -49)
 
-[node name="Coin4" parent="." instance=ExtResource("6_8wuwg")]
+[node name="Coin4" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(372, -49)
 
-[node name="Coin5" parent="." instance=ExtResource("6_8wuwg")]
+[node name="Coin5" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(400, -50)
 
-[node name="Coin6" parent="." instance=ExtResource("6_8wuwg")]
+[node name="Coin6" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(434, -50)
 
-[node name="Coin8" parent="." instance=ExtResource("6_8wuwg")]
+[node name="Coin8" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(310, -15)
-is_moving = true
 
-[node name="Coin7" parent="." instance=ExtResource("6_8wuwg")]
+[node name="Coin7" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(405, 2)
 
-[node name="Enemy" parent="." instance=ExtResource("4_nd2xe")]
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("4_nd2xe")]
 position = Vector2(131, 11)
 
-[node name="Enemy2" parent="." instance=ExtResource("4_nd2xe")]
+[node name="Enemy2" parent="Enemies" instance=ExtResource("4_nd2xe")]
 position = Vector2(462, -51)
 move_dir = Vector2(-120, 0)
 
-[node name="Enemy3" parent="." instance=ExtResource("4_nd2xe")]
+[node name="Enemy3" parent="Enemies" instance=ExtResource("4_nd2xe")]
 position = Vector2(247, 7)
 
 [node name="EndFlag" parent="." instance=ExtResource("5_aoku7")]

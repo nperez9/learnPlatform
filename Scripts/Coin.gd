@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var is_moving : bool = false
+@export var is_moving : bool = true
 
 var bob_height : float = 5.0
 var bob_speed : float = 5.0
@@ -9,11 +9,13 @@ var t : float = 0.0
 @onready var start_y : float = global_position.y
 
 func _process(delta):
+	if (!is_moving):
+		return
+	# this will make the coin bob up and down
 	t += delta
-	
 	# this will make a bouncing effect
-	var d = (sin(t * bob_speed) + 1) / 2
-	global_position.y = start_y + (d * bob_height)
+	var delta_movement : float = (sin(t * bob_speed) + 1) / 2
+	global_position.y = start_y + (delta_movement * bob_height)
 
 
 
