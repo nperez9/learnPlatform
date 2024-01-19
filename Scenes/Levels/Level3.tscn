@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://ssnwm2ms20qc"]
+
+[ext_resource type="PackedScene" uid="uid://dmyeq1yxa6yh1" path="res://Scenes/Interactuable/tile_map_industry.tscn" id="1_butru"]
+[ext_resource type="PackedScene" uid="uid://bpy0i20b1mmpf" path="res://Scenes/player.tscn" id="2_clh8o"]
+[ext_resource type="PackedScene" uid="uid://b0mt0pl45xg2f" path="res://Scenes/Enemies/spikes.tscn" id="3_8ohe3"]
+[ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://Scenes/coin.tscn" id="4_8rwpf"]
+[ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://Scenes/Enemies/enemy.tscn" id="5_cgvnf"]
+[ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://Scenes/Interactuable/end_flag.tscn" id="6_5mfsl"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_butru")]
+
+[node name="Player" parent="." instance=ExtResource("2_clh8o")]
+position = Vector2(38, -15)
+
+[node name="Spikes2" parent="." instance=ExtResource("3_8ohe3")]
+position = Vector2(281, -9)
+
+[node name="Spikes" parent="." instance=ExtResource("3_8ohe3")]
+position = Vector2(532, -27)
+
+[node name="Coin" parent="." instance=ExtResource("4_8rwpf")]
+position = Vector2(90, -15)
+
+[node name="Coin2" parent="." instance=ExtResource("4_8rwpf")]
+position = Vector2(174, -49)
+
+[node name="Coin3" parent="." instance=ExtResource("4_8rwpf")]
+position = Vector2(218, -49)
+
+[node name="Coin4" parent="." instance=ExtResource("4_8rwpf")]
+position = Vector2(372, -49)
+
+[node name="Coin5" parent="." instance=ExtResource("4_8rwpf")]
+position = Vector2(400, -50)
+
+[node name="Coin6" parent="." instance=ExtResource("4_8rwpf")]
+position = Vector2(434, -50)
+
+[node name="Coin8" parent="." instance=ExtResource("4_8rwpf")]
+position = Vector2(310, -15)
+is_moving = true
+
+[node name="Coin7" parent="." instance=ExtResource("4_8rwpf")]
+position = Vector2(405, 2)
+
+[node name="Enemy" parent="." instance=ExtResource("5_cgvnf")]
+position = Vector2(131, 11)
+
+[node name="Enemy2" parent="." instance=ExtResource("5_cgvnf")]
+position = Vector2(462, -51)
+move_dir = Vector2(-120, 0)
+
+[node name="Enemy3" parent="." instance=ExtResource("5_cgvnf")]
+position = Vector2(247, 7)
+
+[node name="EndFlag" parent="." instance=ExtResource("6_5mfsl")]
+position = Vector2(588, -27)
+next_scene = "res://Scenes/main.tscn"
