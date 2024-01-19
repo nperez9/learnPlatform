@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
-Build/
+
+# Ignore everything in the Build directory
+Build/*
+# But don't ignore .gitkeep
+!Build/.gitkeep
