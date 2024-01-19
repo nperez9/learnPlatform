@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://Scenes/Enemies/enemy.tscn" id="5_cgvnf"]
 [ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://Scenes/Interactuable/end_flag.tscn" id="6_5mfsl"]
 
-[node name="Level2" type="Node2D"]
+[node name="Level3" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_butru")]
 
