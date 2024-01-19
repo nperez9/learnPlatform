@@ -4,10 +4,12 @@ extends CharacterBody2D
 @export var move_speed: float = 100.0
 @export var jump_force : float = 200.0
 
+const MAX_JUMPS = 2
+
 var gravity : float = 500.0
-var can_double_jump : float = false
 var sprite : AnimatedSprite2D
-var score : int = 0;
+var score : int = 0
+var jumps : int = 0
 
 @onready var score_coin_text : Label = get_node("CanvasLayer/ScoreCoin")
 
@@ -18,6 +20,7 @@ func _ready():
 func _physics_process(delta):
 	velocity.x = 0
 	
+	## Ground Movement/animation manager
 	if Input.is_key_pressed(KEY_LEFT):
 		velocity.x -= move_speed
 		sprite.play("walk")
@@ -28,22 +31,22 @@ func _physics_process(delta):
 		sprite.play("walk")
 	else: 
 		sprite.play("idle")
-		
+	
+	## Jumping | falling
+	if is_on_floor():
+		jumps = MAX_JUMPS
+
+	if Input.is_action_just_pressed("jump") and jumps > 0:
+		velocity.y = -jump_force
+		jumps -= 1
+	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		sprite.play("jump")
-	else:
-		can_double_jump = true
-	
-	if (is_on_floor()) and Input.is_key_pressed(KEY_SPACE):
-		velocity.y = -jump_force
-	elif can_double_jump and Input.is_key_pressed(KEY_SPACE):
-		velocity.y = -jump_force
-		can_double_jump = false;
-	
+		
 	move_and_slide()
 	
-	if global_position.y > 100:
+	if global_position.y > 150:
 		game_over()
 
 func game_over():

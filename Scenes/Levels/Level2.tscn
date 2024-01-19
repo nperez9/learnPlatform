@@ -62,4 +62,4 @@ position = Vector2(247, 7)
 
 [node name="EndFlag" parent="." instance=ExtResource("5_aoku7")]
 position = Vector2(588, -27)
-next_scene = "res://Scenes/main.tscn"
+next_scene = "res://Scenes/Levels/Level3.tscn"
