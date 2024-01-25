@@ -38,7 +38,13 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("jump") and jumps > 0:
 		velocity.y = -jump_force
-		jumps -= 1
+		if not is_on_floor():
+			jumps -= 2
+		else:
+			jumps -= 1
+		if jumps == 0:
+			## TODO:
+			print_debug("show double jump effect")
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -46,7 +52,7 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	
-	if global_position.y > 150:
+	if global_position.y > 350:
 		game_over()
 
 func game_over():
