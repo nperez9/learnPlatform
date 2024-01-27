@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ssnwm2ms20qc"]
+[gd_scene load_steps=8 format=3 uid="uid://ssnwm2ms20qc"]
 
 [ext_resource type="PackedScene" uid="uid://dmyeq1yxa6yh1" path="res://Scenes/Interactuable/tile_map_industry.tscn" id="1_butru"]
 [ext_resource type="PackedScene" uid="uid://bpy0i20b1mmpf" path="res://Scenes/player.tscn" id="2_clh8o"]
@@ -6,21 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://Scenes/coin.tscn" id="4_8rwpf"]
 [ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://Scenes/Enemies/enemy.tscn" id="5_cgvnf"]
 [ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://Scenes/Interactuable/end_flag.tscn" id="6_5mfsl"]
-[ext_resource type="Texture2D" uid="uid://dl6g7jve7l1jm" path="res://Sprites/Characters/character_0015.png" id="6_na03w"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ua45f"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_na03w")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_xdfu0"]
-radius = 7.07107
+[ext_resource type="PackedScene" uid="uid://cgmr2n5mf7all" path="res://Scenes/Enemies/spiker_metal.tscn" id="6_m7b4b"]
 
 [node name="Level3" type="Node2D"]
 
@@ -59,17 +45,7 @@ position = Vector2(432, -85)
 position = Vector2(432, -56)
 move_dir = Vector2(0, 50)
 
-[node name="SpikerMetal" type="Area2D" parent="Enemies"]
-z_index = 10
-position = Vector2(156, -40)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemies/SpikerMetal"]
-position = Vector2(-2, -6)
-sprite_frames = SubResource("SpriteFrames_ua45f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/SpikerMetal"]
-position = Vector2(-2, -3)
-shape = SubResource("CircleShape2D_xdfu0")
+[node name="SpikerMetal" parent="Enemies" instance=ExtResource("6_m7b4b")]
 
 [node name="EndFlag" parent="." instance=ExtResource("6_5mfsl")]
 position = Vector2(588, -27)
