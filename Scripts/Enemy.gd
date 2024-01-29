@@ -5,11 +5,13 @@ extends Area2D
 
 var start_pos : Vector2
 var target_pos: Vector2
+var prev_pos_x: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_pos = global_position
 	target_pos = start_pos + move_dir
+	prev_pos_x = global_position.x
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -20,7 +22,13 @@ func _process(delta):
 			target_pos = start_pos + move_dir
 		else: 
 			target_pos = start_pos
-
+	
+	if (prev_pos_x < global_position.x): 
+		$AnimatedSprite2D.scale.x = -1
+	else: 
+		$AnimatedSprite2D.scale.x = 1
+	prev_pos_x = global_position.x	
+	
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		body.game_over()
