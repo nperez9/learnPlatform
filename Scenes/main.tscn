@@ -426,27 +426,28 @@ position = Vector2(431, -36)
 [node name="Enemy2" parent="Enemies" instance=ExtResource("2_vnrl7")]
 position = Vector2(320, -36)
 
-[node name="Enemy" parent="Enemies" instance=ExtResource("2_vnrl7")]
-
 [node name="Spikes" parent="." instance=ExtResource("5_30va3")]
 
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2(368, -74)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("6_lv21x")]
-position = Vector2(-337, 55)
+position = Vector2(-337, 60)
 
 [node name="Coin" parent="Coins" instance=ExtResource("6_lv21x")]
-position = Vector2(-387, 55)
+position = Vector2(-385, 60)
 
 [node name="Coin3" parent="Coins" instance=ExtResource("6_lv21x")]
-position = Vector2(-155, 30)
+position = Vector2(-157, 37)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("6_lv21x")]
+position = Vector2(-157, 37)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("6_lv21x")]
-position = Vector2(-362, 55)
+position = Vector2(-361, 60)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("6_lv21x")]
-position = Vector2(0, 0)
+position = Vector2(0, 3)
 
 [node name="EndFlag" parent="." instance=ExtResource("6_nug8f")]
 next_scene = "res://Scenes/Levels/Level2.tscn"

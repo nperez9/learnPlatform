@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://Scenes/coin.tscn" id="6_8wuwg"]
 
 [node name="Level2" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-67.0]
 
 [node name="TileMap" parent="." instance=ExtResource("1_18m3e")]
 
@@ -37,16 +38,16 @@ position = Vector2(218, -49)
 position = Vector2(372, -49)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("6_8wuwg")]
-position = Vector2(400, -50)
+position = Vector2(407, -49)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("6_8wuwg")]
-position = Vector2(434, -50)
+position = Vector2(441, -49)
 
 [node name="Coin8" parent="Coins" instance=ExtResource("6_8wuwg")]
 position = Vector2(310, -15)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("6_8wuwg")]
-position = Vector2(405, 2)
+position = Vector2(407, 6)
 
 [node name="Enemies" type="Node2D" parent="."]
 
