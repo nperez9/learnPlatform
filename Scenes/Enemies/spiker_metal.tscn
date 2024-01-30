@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cgmr2n5mf7all"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_ub72n"]
+[ext_resource type="Script" path="res://Scripts/SpikerMetalEnemy.gd" id="1_bth3d"]
 [ext_resource type="Texture2D" uid="uid://dl6g7jve7l1jm" path="res://Sprites/Characters/character_0015.png" id="2_smxk0"]
 [ext_resource type="Texture2D" uid="uid://e7v0jqfdbg42" path="res://Sprites/Characters/character_0016.png" id="3_kayyp"]
 
@@ -23,9 +23,7 @@ radius = 6.0
 
 [node name="SpikerMetal" type="Area2D"]
 z_index = 10
-script = ExtResource("1_ub72n")
-move_speed = 15.0
-move_dir = Vector2(80, 0)
+script = ExtResource("1_bth3d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iux76")
@@ -35,5 +33,13 @@ frame_progress = 0.379435
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
 shape = SubResource("CircleShape2D_xdfu0")
+
+[node name="LeftRayCast" type="RayCast2D" parent="."]
+position = Vector2(-8, 0)
+target_position = Vector2(0, 14)
+
+[node name="RightRayCast" type="RayCast2D" parent="."]
+position = Vector2(8, 0)
+target_position = Vector2(0, 14)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
