@@ -8,6 +8,7 @@ const MAX_JUMPS = 2
 
 var gravity : float = 500.0
 var sprite : AnimatedSprite2D
+var jump_effect: AnimatedSprite2D
 var score : int = 0
 var jumps : int = 0
 
@@ -15,6 +16,8 @@ var jumps : int = 0
 
 func _ready():
 	sprite = get_node("AnimatedSprite2D")
+	jump_effect = $JumpEffect
+	jump_effect.visible = false
 	sprite.flip_h = defaultDirection
 
 func _physics_process(delta):
@@ -23,11 +26,11 @@ func _physics_process(delta):
 	## Ground Movement/animation manager
 	if Input.is_key_pressed(KEY_LEFT):
 		velocity.x -= move_speed
+		flip_sprite(!defaultDirection)
 		sprite.play("walk")
-		sprite.flip_h = !defaultDirection
 	elif Input.is_key_pressed(KEY_RIGHT):
 		velocity.x += move_speed
-		sprite.flip_h = defaultDirection
+		flip_sprite(defaultDirection)
 		sprite.play("walk")
 	else: 
 		sprite.play("idle")
@@ -40,18 +43,23 @@ func _physics_process(delta):
 		velocity.y = -jump_force
 		if not is_on_floor():
 			jumps -= 2
+			sprite.play("double_jump")
+			# jump_effect.visible = true
+			# jump_effect.play("default")
 		else:
 			jumps -= 1
-		if jumps == 0:
-			## TODO:
-			print_debug("show double jump effect")
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		sprite.play("jump")
 		
 	move_and_slide()
-	
+	check_lose_condition()
+
+func flip_sprite(direction: bool):
+	sprite.flip_h = direction
+
+func check_lose_condition():
 	if global_position.y > 350:
 		game_over()
 
