@@ -11,6 +11,7 @@ var sprite : AnimatedSprite2D
 var jump_effect: AnimatedSprite2D
 var score : int = 0
 var jumps : int = 0
+var animation_lock : bool = false
 
 @onready var score_coin_text : Label = get_node("CanvasLayer/ScoreCoin")
 
@@ -27,13 +28,13 @@ func _physics_process(delta):
 	if Input.is_key_pressed(KEY_LEFT):
 		velocity.x -= move_speed
 		flip_sprite(!defaultDirection)
-		sprite.play("walk")
+		change_animation("walk")
 	elif Input.is_key_pressed(KEY_RIGHT):
 		velocity.x += move_speed
 		flip_sprite(defaultDirection)
-		sprite.play("walk")
+		change_animation("walk")
 	else: 
-		sprite.play("idle")
+		change_animation("idle")
 	
 	## Jumping | falling
 	if is_on_floor():
@@ -43,15 +44,14 @@ func _physics_process(delta):
 		velocity.y = -jump_force
 		if not is_on_floor():
 			jumps -= 2
-			sprite.play("double_jump")
-			# jump_effect.visible = true
-			# jump_effect.play("default")
+			change_animation("double_jump")
+			animation_lock = true
 		else:
 			jumps -= 1
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		sprite.play("jump")
+		change_animation("jump")
 		
 	move_and_slide()
 	check_lose_condition()
@@ -69,3 +69,11 @@ func game_over():
 func add_score(amount: int):
 	score += amount
 	score_coin_text.text = str(score)
+
+func change_animation(animationKey: String):
+	if !animation_lock:
+		sprite.play(animationKey)
+
+func _on_animated_sprite_2d_animation_finished():
+	if sprite.animation == "double_jump":
+		animation_lock = false
