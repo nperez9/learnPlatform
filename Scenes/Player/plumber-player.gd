@@ -25,11 +25,11 @@ func _physics_process(delta):
 	velocity.x = 0
 	
 	## Ground Movement/animation manager
-	if Input.is_key_pressed(KEY_LEFT):
+	if Input.is_action_pressed("mode_left"):
 		velocity.x -= move_speed
 		flip_sprite(!defaultDirection)
 		change_animation("walk")
-	elif Input.is_key_pressed(KEY_RIGHT):
+	elif Input.is_action_pressed("move_right"):
 		velocity.x += move_speed
 		flip_sprite(defaultDirection)
 		change_animation("walk")
@@ -63,6 +63,9 @@ func check_lose_condition():
 	if global_position.y > 350:
 		game_over()
 
+func get_power_up():
+	pass
+
 func game_over():
 	get_tree().call_deferred("reload_current_scene")
 	
@@ -77,3 +80,4 @@ func change_animation(animationKey: String):
 func _on_animated_sprite_2d_animation_finished():
 	if sprite.animation == "double_jump":
 		animation_lock = false
+

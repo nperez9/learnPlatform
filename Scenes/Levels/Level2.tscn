@@ -1,19 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://cjignrnokc4kb"]
 
 [ext_resource type="PackedScene" uid="uid://dmyeq1yxa6yh1" path="res://Scenes/Interactuable/tile_map_industry.tscn" id="1_18m3e"]
-[ext_resource type="PackedScene" uid="uid://bpy0i20b1mmpf" path="res://Scenes/player.tscn" id="2_072ye"]
 [ext_resource type="PackedScene" uid="uid://b0mt0pl45xg2f" path="res://Scenes/Enemies/spikes.tscn" id="3_wo6h7"]
 [ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://Scenes/Enemies/enemy.tscn" id="4_nd2xe"]
 [ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://Scenes/Interactuable/end_flag.tscn" id="5_aoku7"]
 [ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://Scenes/coin.tscn" id="6_8wuwg"]
+[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://Scenes/Player/plumber-player.tscn" id="6_egtkt"]
 
 [node name="Level2" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-67.0]
 
 [node name="TileMap" parent="." instance=ExtResource("1_18m3e")]
-
-[node name="Player" parent="." instance=ExtResource("2_072ye")]
-position = Vector2(38, -15)
 
 [node name="SpikesContainer" type="Node2D" parent="."]
 
@@ -64,3 +61,6 @@ position = Vector2(247, 7)
 [node name="EndFlag" parent="." instance=ExtResource("5_aoku7")]
 position = Vector2(588, -27)
 next_scene = "res://Scenes/Levels/Level3.tscn"
+
+[node name="PlayerPlumber" parent="." instance=ExtResource("6_egtkt")]
+position = Vector2(41, -10)
