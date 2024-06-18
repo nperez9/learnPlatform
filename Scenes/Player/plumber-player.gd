@@ -12,8 +12,10 @@ var jump_effect: AnimatedSprite2D
 var score : int = 0
 var jumps : int = 0
 var animation_lock : bool = false
+var die: bool = false
 
 @onready var score_coin_text : Label = get_node("CanvasLayer/ScoreCoin")
+@onready var anim_player = $AnimationPlayer
 
 func _ready():
 	sprite = get_node("AnimatedSprite2D")
@@ -23,6 +25,9 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.x = 0
+	if die: 
+		return
+		
 	
 	## Ground Movement/animation manager
 	if Input.is_action_pressed("mode_left"):
@@ -67,7 +72,10 @@ func get_power_up():
 	pass
 
 func game_over():
-	get_tree().call_deferred("reload_current_scene")
+	sprite.stop()
+	sprite.play("die")
+	die = true
+	anim_player.play("die")
 	
 func add_score(amount: int):
 	score += amount
@@ -76,6 +84,10 @@ func add_score(amount: int):
 func change_animation(animationKey: String):
 	if !animation_lock:
 		sprite.play(animationKey)
+
+## Called from die animation
+func reload_level() -> void:
+	get_tree().call_deferred("reload_current_scene")
 
 func _on_animated_sprite_2d_animation_finished():
 	if sprite.animation == "double_jump":

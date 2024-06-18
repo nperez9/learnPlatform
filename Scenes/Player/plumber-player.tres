@@ -1,6 +1,10 @@
-[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://bhrcgnejaoq14"]
+[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://bhrcgnejaoq14"]
 
 [ext_resource type="Texture2D" uid="uid://13csumcn7vj8" path="res://Sprites/Plumbers/Plumbers.png" id="1_cpuwc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkemw"]
+atlas = ExtResource("1_cpuwc")
+region = Rect2(0, 104, 12, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gcyba"]
 atlas = ExtResource("1_cpuwc")
@@ -52,6 +56,14 @@ region = Rect2(80, 55, 16, 17)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkemw")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gcyba")
