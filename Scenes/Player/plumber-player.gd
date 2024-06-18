@@ -15,10 +15,10 @@ var animation_lock : bool = false
 var die: bool = false
 
 @onready var score_coin_text : Label = get_node("CanvasLayer/ScoreCoin")
-@onready var anim_player = $AnimationPlayer
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 func _ready():
-	sprite = get_node("AnimatedSprite2D")
+	sprite = $AnimatedSprite2D
 	jump_effect = $JumpEffect
 	jump_effect.visible = false
 	sprite.flip_h = defaultDirection
@@ -27,8 +27,7 @@ func _physics_process(delta):
 	velocity.x = 0
 	if die: 
 		return
-		
-	
+
 	## Ground Movement/animation manager
 	if Input.is_action_pressed("mode_left"):
 		velocity.x -= move_speed

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://qc4k7fafw0tx"]
+[gd_scene load_steps=15 format=3 uid="uid://qc4k7fafw0tx"]
 
 [ext_resource type="Script" path="res://Scenes/Player/plumber-player.gd" id="1_blwad"]
 [ext_resource type="SpriteFrames" uid="uid://bhrcgnejaoq14" path="res://Scenes/Player/plumber-player.tres" id="2_tkoci"]
@@ -136,10 +136,14 @@ tracks/2/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_2qyih"]
+resource_name = "respawn"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2cefd"]
 _data = {
 "RESET": SubResource("Animation_0ti6k"),
-"die": SubResource("Animation_0qr1b")
+"die": SubResource("Animation_0qr1b"),
+"respawn": SubResource("Animation_2qyih")
 }
 
 [node name="PlayerPlumber" type="CharacterBody2D" groups=["Player"]]
@@ -157,7 +161,7 @@ scale = Vector2(1.2, 1.2)
 sprite_frames = ExtResource("2_tkoci")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.645608
+frame_progress = 0.591132
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -193,10 +197,10 @@ libraries = {
 
 [node name="Colors" type="ColorRect" parent="."]
 z_index = 4096
-offset_left = -118.0
-offset_top = -153.0
-offset_right = -78.0
-offset_bottom = -113.0
+offset_left = -137.0
+offset_top = -172.0
+offset_right = -97.0
+offset_bottom = -132.0
 scale = Vector2(11.7182, 6.77844)
 color = Color(1, 1, 1, 0)
 
