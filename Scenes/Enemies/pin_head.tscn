@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://oc061dfacpns"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/pin_head.gd" id="1_mwiss"]
+[ext_resource type="Texture2D" uid="uid://ci6g21si71q67" path="res://Sprites/Plumbers/Enemies.png" id="1_nmfiw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1vbr"]
+atlas = ExtResource("1_nmfiw")
+region = Rect2(0, 57, 10, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clpb8"]
+atlas = ExtResource("1_nmfiw")
+region = Rect2(16, 57, 10, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep66c"]
+atlas = ExtResource("1_nmfiw")
+region = Rect2(32, 57, 10, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ti7r"]
+atlas = ExtResource("1_nmfiw")
+region = Rect2(48, 57, 10, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_41u0q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1vbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clpb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ep66c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ti7r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b68fv"]
+radius = 3.0
+height = 8.0
+
+[node name="PinHead" type="Area2D"]
+script = ExtResource("1_mwiss")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_41u0q")
+autoplay = "default"
+frame_progress = 0.764341
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_b68fv")
+
+[node name="LeftRayCast" type="RayCast2D" parent="."]
+position = Vector2(-4, 0)
+target_position = Vector2(0, 14)
+
+[node name="RightRayCast" type="RayCast2D" parent="."]
+position = Vector2(3, 0)
+target_position = Vector2(0, 14)

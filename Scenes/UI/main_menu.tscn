@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://c81b3y4civlxv"]
+
+[ext_resource type="Texture2D" uid="uid://bt0l6egi43dwm" path="res://metadata/cover.jpg" id="1_e0chc"]
+[ext_resource type="Script" path="res://Scenes/UI/scripts/main_menu.gd" id="1_netay"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2mqe"]
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_so534"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_netay")
+
+[node name="Backgorund" type="Sprite2D" parent="."]
+position = Vector2(713, 270)
+texture = ExtResource("1_e0chc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 267.0
+offset_right = 837.0
+offset_bottom = 330.0
+text = "GreenWilds! Demo"
+label_settings = SubResource("LabelSettings_d2mqe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Controls" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 268.0
+offset_bottom = 85.0
+text = "Controls: 
+- Use Arrows to move
+- Use Z for jump and double Jump"
+label_settings = SubResource("LabelSettings_so534")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 596.0
+offset_right = 761.0
+offset_bottom = 696.0
+theme_override_font_sizes/font_size = 60
+text = "Start"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
