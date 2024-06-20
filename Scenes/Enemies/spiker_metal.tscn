@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cgmr2n5mf7all"]
 
-[ext_resource type="Script" path="res://Scripts/SpikerMetalEnemy.gd" id="1_bth3d"]
-[ext_resource type="Texture2D" uid="uid://dl6g7jve7l1jm" path="res://Sprites/Characters/character_0015.png" id="2_smxk0"]
-[ext_resource type="Texture2D" uid="uid://e7v0jqfdbg42" path="res://Sprites/Characters/character_0016.png" id="3_kayyp"]
+[ext_resource type="Script" path="res://scenes/enemies/scripts/spiker_metal_enemy.gd" id="1_bth3d"]
+[ext_resource type="Texture2D" uid="uid://dl6g7jve7l1jm" path="res://sprites/characters/character_0015.png" id="2_smxk0"]
+[ext_resource type="Texture2D" uid="uid://e7v0jqfdbg42" path="res://sprites/characters/character_0016.png" id="3_kayyp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iux76"]
 animations = [{

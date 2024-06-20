@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://oc061dfacpns"]
 
-[ext_resource type="Script" path="res://Scenes/Enemies/pin_head.gd" id="1_mwiss"]
-[ext_resource type="Texture2D" uid="uid://ci6g21si71q67" path="res://Sprites/Plumbers/Enemies.png" id="1_nmfiw"]
+[ext_resource type="Script" path="res://scenes/enemies/scripts/pin_head.gd" id="1_mwiss"]
+[ext_resource type="Texture2D" uid="uid://ci6g21si71q67" path="res://sprites/plumbers/Enemies.png" id="1_nmfiw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1vbr"]
 atlas = ExtResource("1_nmfiw")

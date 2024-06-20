@@ -2,6 +2,6 @@
 .godot/
 
 # Ignore everything in the Build directory
-Build/*
+build/*
 # But don't ignore .gitkeep
-!Build/.gitkeep
+!build/.gitkeep

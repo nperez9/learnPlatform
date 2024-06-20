@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://ce25o16j5gq5v"]
 
-[ext_resource type="Texture2D" uid="uid://cdamyb7n7sain" path="res://Sprites/Plumbers/Parallax.png" id="1_b501r"]
-[ext_resource type="Texture2D" uid="uid://odce4rn2iprk" path="res://Sprites/Plumbers/Decorations.png" id="2_cny84"]
-[ext_resource type="Texture2D" uid="uid://2p0igmjmnrwl" path="res://Sprites/Plumbers/Interactable.png" id="2_iipc8"]
+[ext_resource type="Texture2D" uid="uid://cdamyb7n7sain" path="res://sprites/plumbers/Parallax.png" id="1_b501r"]
+[ext_resource type="Texture2D" uid="uid://odce4rn2iprk" path="res://sprites/plumbers/Decorations.png" id="2_cny84"]
+[ext_resource type="Texture2D" uid="uid://2p0igmjmnrwl" path="res://sprites/plumbers/Interactable.png" id="2_iipc8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7e5j4"]
 resource_name = "Parallax"

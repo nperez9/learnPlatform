@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://d2px4aye3cc3s"
-path="res://.godot/imported/Fisticuffs and Ale.ogg-c3dfe816de67ec34c095e328899e413f.oggvorbisstr"
+path="res://.godot/imported/Fisticuffs and Ale.ogg-57096152dbf9010d58517463f9a94eef.oggvorbisstr"
 
 [deps]
 
-source_file="res://Audio/Music/Fisticuffs and Ale.ogg"
-dest_files=["res://.godot/imported/Fisticuffs and Ale.ogg-c3dfe816de67ec34c095e328899e413f.oggvorbisstr"]
+source_file="res://audio/music/Fisticuffs and Ale.ogg"
+dest_files=["res://.godot/imported/Fisticuffs and Ale.ogg-57096152dbf9010d58517463f9a94eef.oggvorbisstr"]
 
 [params]
 

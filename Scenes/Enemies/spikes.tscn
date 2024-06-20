@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0mt0pl45xg2f"]
 
-[ext_resource type="Script" path="res://Scripts/Spikes.gd" id="1_682po"]
-[ext_resource type="Texture2D" uid="uid://bj4phc7ceh37p" path="res://Sprites/Objects/tile_0068.png" id="2_wwguw"]
+[ext_resource type="Script" path="res://scenes/enemies/scripts/spikes.gd" id="1_682po"]
+[ext_resource type="Texture2D" uid="uid://bj4phc7ceh37p" path="res://sprites/objects/tile_0068.png" id="2_wwguw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3diia"]
 size = Vector2(18, 10)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0jqesgjxpnj"
-path="res://.godot/imported/Ground-and-Platforms.png-0ce4f922800c52d6947c6f54bb52a00d.ctex"
+path="res://.godot/imported/Ground-and-Platforms.png-dd9b0aef090f34fbbbcbceec02053d47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Plumbers/Ground-and-Platforms.png"
-dest_files=["res://.godot/imported/Ground-and-Platforms.png-0ce4f922800c52d6947c6f54bb52a00d.ctex"]
+source_file="res://sprites/plumbers/Ground-and-Platforms.png"
+dest_files=["res://.godot/imported/Ground-and-Platforms.png-dd9b0aef090f34fbbbcbceec02053d47.ctex"]
 
 [params]
 
