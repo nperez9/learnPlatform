@@ -1,12 +1,27 @@
 [gd_scene load_steps=8 format=3 uid="uid://c81b3y4civlxv"]
 
 [ext_resource type="Texture2D" uid="uid://bt0l6egi43dwm" path="res://metadata/cover.jpg" id="1_e0chc"]
-[ext_resource type="Script" path="res://Scenes/UI/scripts/main_menu.gd" id="1_netay"]
+[ext_resource type="Script" path="res://scenes/UI/scripts/main_menu.gd" id="1_netay"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d2mqe"]
 font_size = 45
 
 [sub_resource type="LabelSettings" id="LabelSettings_so534"]
+
+[sub_resource type="Animation" id="Animation_62gjf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_2a1xn"]
 resource_name = "dissapear"
@@ -36,21 +51,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"go_to_next_scene"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_62gjf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iqyld"]

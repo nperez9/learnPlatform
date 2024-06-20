@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi573tetj2n1a"]
 
-[ext_resource type="Script" path="res://Scripts/Coin.gd" id="1_yr2ew"]
+[ext_resource type="Script" path="res://scenes/interactuable/scripts/coin.gd" id="1_yr2ew"]
 [ext_resource type="Texture2D" uid="uid://ydbe1tyhvygu" path="res://Sprites/Objects/tile_0151.png" id="2_egjmk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82o50"]

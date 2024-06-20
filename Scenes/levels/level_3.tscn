@@ -1,15 +1,15 @@
 [gd_scene load_steps=14 format=3 uid="uid://ssnwm2ms20qc"]
 
-[ext_resource type="PackedScene" uid="uid://dmyeq1yxa6yh1" path="res://Scenes/Interactuable/tile_map_industry.tscn" id="1_butru"]
+[ext_resource type="PackedScene" uid="uid://dmyeq1yxa6yh1" path="res://scenes/interactuable/tile_map_industry.tscn" id="1_butru"]
 [ext_resource type="Texture2D" uid="uid://cdamyb7n7sain" path="res://Sprites/Plumbers/Parallax.png" id="1_rvfse"]
 [ext_resource type="Texture2D" uid="uid://odce4rn2iprk" path="res://Sprites/Plumbers/Decorations.png" id="2_ovbg8"]
-[ext_resource type="PackedScene" uid="uid://b0mt0pl45xg2f" path="res://Scenes/Enemies/spikes.tscn" id="3_8ohe3"]
-[ext_resource type="PackedScene" uid="uid://ce25o16j5gq5v" path="res://Scenes/Tilesets/background.tscn" id="3_70et5"]
-[ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://Scenes/coin.tscn" id="4_8rwpf"]
-[ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://Scenes/Enemies/enemy.tscn" id="5_cgvnf"]
-[ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://Scenes/Interactuable/end_flag.tscn" id="6_5mfsl"]
-[ext_resource type="PackedScene" uid="uid://cgmr2n5mf7all" path="res://Scenes/Enemies/spiker_metal.tscn" id="6_m7b4b"]
-[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://Scenes/Player/plumber-player.tscn" id="7_kqqj7"]
+[ext_resource type="PackedScene" uid="uid://b0mt0pl45xg2f" path="res://scenes/enemy/spikes.tscn" id="3_8ohe3"]
+[ext_resource type="PackedScene" uid="uid://ce25o16j5gq5v" path="res://scenes/Tilesets/background.tscn" id="3_70et5"]
+[ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://scenes/interactuable/coin.tscn" id="4_8rwpf"]
+[ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://scenes/enemy/bat_mechanic.tscn" id="5_cgvnf"]
+[ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://scenes/interactuable/end_flag.tscn" id="6_5mfsl"]
+[ext_resource type="PackedScene" uid="uid://cgmr2n5mf7all" path="res://scenes/enemy/spiker_metal.tscn" id="6_m7b4b"]
+[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://scenes/Player/plumber-player.tscn" id="7_kqqj7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7e5j4"]
 resource_name = "Parallax"

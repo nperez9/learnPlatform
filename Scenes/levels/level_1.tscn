@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://cercux8y1o8lw"]
 
 [ext_resource type="Texture2D" uid="uid://cyoqpaayjk7xe" path="res://Sprites/Tilemap/tilemap_packed.png" id="1_qdhvc"]
-[ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://Scenes/Enemies/enemy.tscn" id="2_vnrl7"]
-[ext_resource type="PackedScene" uid="uid://b0mt0pl45xg2f" path="res://Scenes/Enemies/spikes.tscn" id="5_30va3"]
-[ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://Scenes/coin.tscn" id="6_lv21x"]
-[ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://Scenes/Interactuable/end_flag.tscn" id="6_nug8f"]
-[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://Scenes/Player/plumber-player.tscn" id="6_subc5"]
+[ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://scenes/enemy/bat_mechanic.tscn" id="2_vnrl7"]
+[ext_resource type="PackedScene" uid="uid://b0mt0pl45xg2f" path="res://scenes/enemy/spikes.tscn" id="5_30va3"]
+[ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://scenes/interactuable/coin.tscn" id="6_lv21x"]
+[ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://scenes/interactuable/end_flag.tscn" id="6_nug8f"]
+[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://scenes/Player/plumber-player.tscn" id="6_subc5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pem38"]
 texture = ExtResource("1_qdhvc")

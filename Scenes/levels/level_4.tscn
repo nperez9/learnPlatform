@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://b0jqesgjxpnj" path="res://Sprites/Plumbers/Ground-and-Platforms.png" id="1_pgocd"]
 [ext_resource type="Texture2D" uid="uid://2p0igmjmnrwl" path="res://Sprites/Plumbers/Interactable.png" id="2_tm1je"]
 [ext_resource type="Texture2D" uid="uid://dvrvbhyhmf6h3" path="res://Sprites/Plumbers/Liquids.png" id="3_6xarw"]
-[ext_resource type="PackedScene" uid="uid://ce25o16j5gq5v" path="res://Scenes/Tilesets/background.tscn" id="3_pt1jg"]
-[ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://Scenes/Interactuable/end_flag.tscn" id="6_ko6tg"]
-[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://Scenes/Player/plumber-player.tscn" id="10_fkfqx"]
+[ext_resource type="PackedScene" uid="uid://ce25o16j5gq5v" path="res://scenes/Tilesets/background.tscn" id="3_pt1jg"]
+[ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://scenes/Interactuable/end_flag.tscn" id="6_ko6tg"]
+[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://scenes/Player/plumber-player.tscn" id="10_fkfqx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ot3po"]
 texture = ExtResource("1_pgocd")
