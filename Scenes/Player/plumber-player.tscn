@@ -153,6 +153,8 @@ defaultDirection = false
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(96, -34)
 zoom = Vector2(3, 3)
+process_callback = 0
+position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
