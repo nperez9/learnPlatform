@@ -28,7 +28,7 @@ func _physics_process(delta):
 	if die: 
 		return
 
-	## Ground Movement/animation manager
+	## Ground Movement/animation manager asdads
 	if Input.is_action_pressed("mode_left"):
 		velocity.x -= move_speed
 		flip_sprite(!defaultDirection)
