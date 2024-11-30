@@ -68,12 +68,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_netay")
 
-[node name="Backgorund" type="Sprite2D" parent="."]
+[node name="StartScreen" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="Backgorund" type="Sprite2D" parent="StartScreen"]
 position = Vector2(713, 270)
 texture = ExtResource("1_e0chc")
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 0
+[node name="Title" type="Label" parent="StartScreen"]
 offset_left = 432.0
 offset_top = 267.0
 offset_right = 837.0
@@ -83,8 +85,7 @@ label_settings = SubResource("LabelSettings_d2mqe")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Controls" type="Label" parent="."]
-layout_mode = 0
+[node name="Controls" type="Label" parent="StartScreen"]
 offset_left = 10.0
 offset_top = 10.0
 offset_right = 268.0
@@ -94,18 +95,66 @@ text = "Controls:
 - Use Z for jump and double Jump"
 label_settings = SubResource("LabelSettings_so534")
 
-[node name="StartButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 511.0
-offset_top = 596.0
-offset_right = 761.0
-offset_bottom = 696.0
+[node name="StartButton" type="Button" parent="StartScreen"]
+offset_left = 500.0
+offset_top = 440.0
+offset_right = 750.0
+offset_bottom = 540.0
 theme_override_font_sizes/font_size = 60
 text = "Start"
+
+[node name="LevelsButton" type="Button" parent="StartScreen"]
+offset_left = 500.0
+offset_top = 570.0
+offset_right = 750.0
+offset_bottom = 670.0
+theme_override_font_sizes/font_size = 60
+text = "Levels"
+
+[node name="LevelsControl" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="BoxContainer" type="BoxContainer" parent="LevelsControl"]
+visible = false
+layout_mode = 0
+offset_left = 52.0
+offset_top = 40.0
+offset_right = 1247.0
+offset_bottom = 692.0
+alignment = 1
+vertical = true
+
+[node name="Level 1" type="Button" parent="LevelsControl/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Lvl 1
+"
+
+[node name="Level 2" type="Button" parent="LevelsControl/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Lvl 2 "
+
+[node name="Level 3" type="Button" parent="LevelsControl/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Lvl 3
+"
+
+[node name="Level 4" type="Button" parent="LevelsControl/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Lvl 4
+"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_iqyld")
 }
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartScreen/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartScreen/LevelsButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="LevelsControl/BoxContainer/Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="LevelsControl/BoxContainer/Level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="LevelsControl/BoxContainer/Level 3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="LevelsControl/BoxContainer/Level 4" to="." method="_on_level_4_pressed"]
