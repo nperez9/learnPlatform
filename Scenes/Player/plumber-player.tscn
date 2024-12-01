@@ -126,13 +126,6 @@ _data = {
 script = ExtResource("1_blwad")
 defaultDirection = false
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_left = -127.0
-offset_top = -163.0
-offset_right = 334.0
-offset_bottom = 103.0
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(96, -34)
 zoom = Vector2(3, 3)
