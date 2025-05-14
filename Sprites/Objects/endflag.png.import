@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cop47aoytyxtb"
-path="res://.godot/imported/endflag.png-0ebc043a550e961f22ce47997a983227.ctex"
+path="res://.godot/imported/endflag.png-c4f71875fd34b32f0665aeb9c4e12c1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/objects/endflag.png"
-dest_files=["res://.godot/imported/endflag.png-0ebc043a550e961f22ce47997a983227.ctex"]
+source_file="res://Sprites/Objects/endflag.png"
+dest_files=["res://.godot/imported/endflag.png-c4f71875fd34b32f0665aeb9c4e12c1d.ctex"]
 
 [params]
 

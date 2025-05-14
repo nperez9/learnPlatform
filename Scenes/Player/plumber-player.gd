@@ -13,9 +13,11 @@ var score : int = 0
 var jumps : int = 0
 var animation_lock : bool = false
 var die: bool = false
+var lock: bool = false
 
-@onready var score_coin_text : Label = get_node("CanvasLayer/ScoreCoin")
+@onready var score_coin_text: Label = get_node("CanvasLayer/ScoreCoin")
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
+@onready var color_rect: ColorRect = $Colors
 
 func _ready():
 	sprite = $AnimatedSprite2D
@@ -25,6 +27,9 @@ func _ready():
 
 func _physics_process(delta):
 	velocity.x = 0
+	if lock: 
+		return
+	
 	if die: 
 		return
 
@@ -87,6 +92,15 @@ func change_animation(animationKey: String):
 ## Called from die animation
 func reload_level() -> void:
 	get_tree().call_deferred("reload_current_scene")
+	
+func win() -> void:
+	lock = true
+	## TODO: add a win sfx
+	sprite.play("win")
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(color_rect, "color", Color.BLACK, 1)
+	tween.tween_callback(func (): lock = false)
+
 
 func _on_animated_sprite_2d_animation_finished():
 	if sprite.animation == "double_jump":

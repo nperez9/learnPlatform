@@ -1,0 +1,4 @@
+Things to do in the plattformer:
+	-- Add camera shake when it hits an enemy
+	-- Add winning animation (check out the sprites)
+	-- Add Starting screen in game

@@ -1,6 +1,6 @@
-[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://bhrcgnejaoq14"]
+[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://bhrcgnejaoq14"]
 
-[ext_resource type="Texture2D" uid="uid://13csumcn7vj8" path="res://sprites/plumbers/Plumbers.png" id="1_cpuwc"]
+[ext_resource type="Texture2D" uid="uid://13csumcn7vj8" path="res://Sprites/Plumbers/Plumbers.png" id="1_cpuwc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rkemw"]
 atlas = ExtResource("1_cpuwc")
@@ -53,6 +53,10 @@ region = Rect2(64, 55, 16, 17)
 [sub_resource type="AtlasTexture" id="AtlasTexture_pl15n"]
 atlas = ExtResource("1_cpuwc")
 region = Rect2(80, 55, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y7jd"]
+atlas = ExtResource("1_cpuwc")
+region = Rect2(0, 128, 13, 16)
 
 [resource]
 animations = [{
@@ -122,4 +126,12 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3y7jd")
+}],
+"loop": true,
+"name": &"win",
+"speed": 5.0
 }]
