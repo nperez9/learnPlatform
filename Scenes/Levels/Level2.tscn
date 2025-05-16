@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://cjignrnokc4kb"]
 
 [ext_resource type="PackedScene" uid="uid://dmyeq1yxa6yh1" path="res://scenes/interactuable/tile_map_industry.tscn" id="1_18m3e"]
-[ext_resource type="PackedScene" uid="uid://b0mt0pl45xg2f" path="res://scenes/enemies/spikes.tscn" id="3_wo6h7"]
-[ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://scenes/enemies/enemy.tscn" id="4_nd2xe"]
+[ext_resource type="PackedScene" uid="uid://b0mt0pl45xg2f" path="res://scenes/Enemies/spikes.tscn" id="3_wo6h7"]
+[ext_resource type="PackedScene" uid="uid://dfj1f71kwy1pk" path="res://scenes/Enemies/enemy.tscn" id="4_nd2xe"]
 [ext_resource type="PackedScene" uid="uid://bqwkdx4u8q68m" path="res://scenes/interactuable/end_flag.tscn" id="5_aoku7"]
 [ext_resource type="PackedScene" uid="uid://bi573tetj2n1a" path="res://scenes/interactuable/coin.tscn" id="6_8wuwg"]
-[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://scenes/player/plumber-player.tscn" id="6_egtkt"]
+[ext_resource type="PackedScene" uid="uid://qc4k7fafw0tx" path="res://scenes/Player/plumber-player.tscn" id="6_egtkt"]
 
 [node name="Level2" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-67.0]

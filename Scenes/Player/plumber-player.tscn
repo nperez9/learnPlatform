@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://qc4k7fafw0tx"]
+[gd_scene load_steps=18 format=3 uid="uid://qc4k7fafw0tx"]
 
 [ext_resource type="Script" path="res://scenes/player/plumber-player.gd" id="1_blwad"]
 [ext_resource type="SpriteFrames" uid="uid://bhrcgnejaoq14" path="res://scenes/Player/plumber-player.tres" id="2_tkoci"]
+[ext_resource type="AudioStream" uid="uid://dj61ivtwhvq0c" path="res://audio/SFX/pick_coin.sfxr" id="3_1ekd0"]
 [ext_resource type="Texture2D" uid="uid://chnafx7wctlr6" path="res://Sprites/Plumbers/Particles-and-Icons.png" id="3_om6cy"]
 [ext_resource type="Texture2D" uid="uid://ydbe1tyhvygu" path="res://Sprites/Objects/tile_0151.png" id="4_wbuhd"]
+[ext_resource type="AudioStream" uid="uid://blillu24suudl" path="res://audio/SFX/power_up.sfxr" id="5_q40mt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r8gw7"]
 radius = 4.0
@@ -153,6 +155,14 @@ _data = {
 [node name="PlayerPlumber" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_blwad")
 defaultDirection = false
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="PowerUpSfx" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("5_q40mt")
+
+[node name="PickupCoinSfx" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("3_1ekd0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(96, -34)

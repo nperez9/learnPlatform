@@ -14,10 +14,36 @@ var jumps : int = 0
 var animation_lock : bool = false
 var die: bool = false
 var lock: bool = false
+var level: int = 1
+
+const ANIM_LEVEL_1 = {
+	"idle": "idle",
+	"walk": "walk",
+	"jump": "jump",
+	"double_jump": "double_jump",
+	"die": "die",
+	"win": "win"
+}
+
+const ANIM_LEVEL_2 = {
+	"idle": "idle_lvl2",
+	"walk": "walk_lvl2",
+	"jump": "jump_lvl2",
+	"double_jump": "double_jump_lvl2",
+	"die": "die_lvl2",
+	"win": "win_lvl2"
+}
+
+const ANIMATIONS = {
+	1: ANIM_LEVEL_1,
+	2: ANIM_LEVEL_2,
+}
 
 @onready var score_coin_text: Label = get_node("CanvasLayer/ScoreCoin")
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var color_rect: ColorRect = $Colors
+@onready var sfx_pickup_coin: AudioStreamPlayer2D = get_node("SFX/PickupCoinSfx")
+@onready var sfx_power_up: AudioStreamPlayer2D = get_node("SFX/PowerUpSfx")
 
 func _ready():
 	sprite = $AnimatedSprite2D
@@ -29,7 +55,6 @@ func _physics_process(delta):
 	velocity.x = 0
 	if lock: 
 		return
-	
 	if die: 
 		return
 
@@ -87,7 +112,7 @@ func add_score(amount: int):
 
 func change_animation(animationKey: String):
 	if !animation_lock:
-		sprite.play(animationKey)
+		sprite.play(get_animation(animationKey))
 
 ## Called from die animation
 func reload_level() -> void:
@@ -97,10 +122,16 @@ func win() -> void:
 	lock = true
 	## TODO: add a win sfx
 	sprite.play("win")
-	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(color_rect, "color", Color.BLACK, 1)
 	tween.tween_callback(func (): lock = false)
 
+
+func get_animation(anim_key: String) -> String:
+	return ANIMATIONS[level][anim_key]
+
+func play_coin_sfx():
+	sfx_pickup_coin.play()
 
 func _on_animated_sprite_2d_animation_finished():
 	if sprite.animation == "double_jump":
